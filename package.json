@@ -1,0 +1,25 @@
+{
+  "name": "aws_serverless_layers_module",
+  "version": "1.0.0",
+  "description": "aws layers enable us to centralized our modules or libraries for the used of lambda's.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jepoycerujano/AWS_Serverless_Layers_Module.git"
+  },
+  "keywords": [
+    "AWS",
+    "Serverless",
+    "AWS_Layers",
+    "Javascript"
+  ],
+  "author": "Jefferson Caoile Cerujano",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jepoycerujano/AWS_Serverless_Layers_Module/issues"
+  },
+  "homepage": "https://github.com/jepoycerujano/AWS_Serverless_Layers_Module#readme"
+}
