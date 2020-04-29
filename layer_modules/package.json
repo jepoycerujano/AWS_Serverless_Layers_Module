@@ -1,0 +1,24 @@
+{
+  "name": "layer_modules",
+  "version": "1.0.0",
+  "description": "this is for lambda layer for all modules dependencies",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "AWS",
+    "Layer"
+  ],
+  "author": "Jefferson Cerujano",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.665.0",
+    "axios": "^0.19.2",
+    "middy": "^0.36.0",
+    "moment": "^2.24.0",
+    "uuid": "^7.0.3",
+    "winston": "^3.2.1",
+    "yup": "^0.28.4"
+  }
+}
