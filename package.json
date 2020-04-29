@@ -21,5 +21,10 @@
   "bugs": {
     "url": "https://github.com/jepoycerujano/AWS_Serverless_Layers_Module/issues"
   },
-  "homepage": "https://github.com/jepoycerujano/AWS_Serverless_Layers_Module#readme"
+  "homepage": "https://github.com/jepoycerujano/AWS_Serverless_Layers_Module#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "serverless-offline": "^6.1.4",
+    "serverless-pseudo-parameters": "^2.5.0"
+  }
 }
