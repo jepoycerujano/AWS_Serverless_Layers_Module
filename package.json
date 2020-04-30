@@ -25,6 +25,7 @@
   "dependencies": {},
   "devDependencies": {
     "serverless-offline": "^6.1.4",
+    "serverless-plugin-scripts": "^1.0.2",
     "serverless-pseudo-parameters": "^2.5.0"
   }
 }

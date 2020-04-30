@@ -10,6 +10,10 @@
     "AWS",
     "Layer"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jepoycerujano/AWS_Serverless_Layers_Module.git"
+  },
   "author": "Jefferson Cerujano",
   "license": "MIT",
   "dependencies": {

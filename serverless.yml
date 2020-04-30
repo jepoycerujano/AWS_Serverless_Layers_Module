@@ -3,13 +3,19 @@ service: aws-serverles-layers-module
 frameworkVersion: ">=1.0.0 <2.0.0"
 
 plugins:
-  - serverless-pseudo-parameters # for developers
+  - serverless-plugin-scripts # for developers, define simple hooks for existing Serverless CLI commands 
+  - serverless-pseudo-parameters # for developers,
   - serverless-offline # for developers
 
 package:
+  excludeDevDependencies: false
   exclude:
-    - .serverless/**
     - layer_modules/**  # sub layer_modules folder
+
+custom:
+  scripts:
+    hooks:
+      'package:initialize': cd layer_modules && npm install
 
 provider:
   name: aws
