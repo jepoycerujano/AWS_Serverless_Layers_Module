@@ -4,7 +4,6 @@ frameworkVersion: ">=1.0.0 <2.0.0"
 
 plugins:
   - serverless-plugin-scripts # for developers, define simple hooks for existing Serverless CLI commands 
-  - serverless-pseudo-parameters # for developers,
   - serverless-offline # for developers
 
 package:
@@ -24,12 +23,10 @@ provider:
   region: ${opt:region, 'us-east-1'} # region where it will be deploy
   deploymentBucket:
     name: libraries.${self:provider.region}.nipahut.club # S3 bucket name
-  environment:
-    NODE_PATH: "./:/opt/node_modules"
 
 layers:
   lambdaLayerModule:
-    path: layer_modules/ # required, path to layer contents on disk
+    path: layer_modules # required, path to layer contents on disk
     name: ${self:service}-${self:provider.stage} # optional, Deployed Lambda layer name
     description: layers of modules for dependencies # optional, Description to publish to AWS
     compatibleRuntimes: # optional, a list of runtimes this layer is compatible with
