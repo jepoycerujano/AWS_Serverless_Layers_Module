@@ -12,3 +12,4 @@ How to used and deploy?
 6. navigate back to AWS_Serverless_Layer_Module 
 7. sls deploy
 ```
+### IMPORTANT: add to your lambdas environment NODE_PATH: './:/opt/node_modules' see Examplae: AWS_Serverless_DynamoDb_CRUD (https://github.com/jepoycerujano/AWS_Serverless_DynamoDb_CRUD)

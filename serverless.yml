@@ -3,15 +3,18 @@ service: aws-serverles-layers-module
 frameworkVersion: ">=1.0.0 <2.0.0"
 
 plugins:
-  - serverless-pseudo-parameters # for developers
+  - serverless-plugin-scripts # for developers, define simple hooks for existing Serverless CLI commands 
   - serverless-offline # for developers
 
 package:
+  excludeDevDependencies: false
   exclude:
-    - "**/node_modules/**"  # all node_modules folder
-    - "**/*.test.*"  # all test files
-    - ".serverless/**"
-    - "layer_module/**"  # all node_modules folder
+    - layer_modules/**  # sub layer_modules folder
+
+custom:
+  scripts:
+    hooks:
+      'package:initialize': cd layer_modules && npm install
 
 provider:
   name: aws
@@ -20,8 +23,6 @@ provider:
   region: ${opt:region, 'us-east-1'} # region where it will be deploy
   deploymentBucket:
     name: libraries.${self:provider.region}.nipahut.club # S3 bucket name
-  environment:
-    NODE_PATH: "./:/opt/node_modules"
 
 layers:
   lambdaLayerModule:
@@ -31,4 +32,4 @@ layers:
     compatibleRuntimes: # optional, a list of runtimes this layer is compatible with
       - nodejs10.x
       - nodejs12.x
-    retain: false # optional, false by default. If true, layer versions are not deleted as new ones are created
+    retain: true # optional, false by default. If true, layer versions are not deleted as new ones are created
