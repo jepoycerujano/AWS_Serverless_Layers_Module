@@ -17,12 +17,12 @@
   "author": "Jefferson Cerujano",
   "license": "MIT",
   "dependencies": {
-    "aws-sdk": "^2.665.0",
-    "axios": "^0.19.2",
+    "aws-sdk": "^2.938.0",
+    "axios": "^0.21.1",
     "middy": "^0.36.0",
-    "moment": "^2.24.0",
-    "uuid": "^7.0.3",
-    "winston": "^3.2.1",
-    "yup": "^0.28.4"
+    "moment": "^2.29.1",
+    "uuid": "^8.3.2",
+    "winston": "^3.3.3",
+    "yup": "^0.32.9"
   }
 }

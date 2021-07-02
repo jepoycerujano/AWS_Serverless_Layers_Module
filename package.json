@@ -1,5 +1,5 @@
 {
-  "name": "aws_serverless_layers_module",
+  "name": "node_modules_layer",
   "version": "1.0.0",
   "description": "aws layers enable us to centralized our modules or libraries for the used of lambda's.",
   "main": "index.js",
@@ -22,9 +22,8 @@
     "url": "https://github.com/jepoycerujano/AWS_Serverless_Layers_Module/issues"
   },
   "homepage": "https://github.com/jepoycerujano/AWS_Serverless_Layers_Module#readme",
-  "dependencies": {},
   "devDependencies": {
-    "serverless-offline": "^6.1.4",
+    "serverless-offline": "^7.0.0",
     "serverless-plugin-scripts": "^1.0.2"
   }
 }

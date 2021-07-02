@@ -1,15 +1,15 @@
-service: aws-serverles-layers-module
+service: nodemoduleslayer
 
-frameworkVersion: ">=1.0.0 <2.0.0"
+frameworkVersion: '2'
 
 plugins:
-  - serverless-plugin-scripts # for developers, define simple hooks for existing Serverless CLI commands 
-  - serverless-offline # for developers
+  - serverless-plugin-scripts
+  - serverless-offline
 
 package:
   excludeDevDependencies: false
   exclude:
-    - layer_modules/**  # sub layer_modules folder
+    - layer_modules/**
 
 custom:
   scripts:
@@ -18,18 +18,16 @@ custom:
 
 provider:
   name: aws
-  runtime: nodejs12.x # node package version
-  stage: ${opt:stage, 'dev'} # default invironment set to (dev = "development stage")
-  region: ${opt:region, 'us-east-1'} # region where it will be deploy
-  deploymentBucket:
-    name: libraries.${self:provider.region}.nipahut.club # S3 bucket name
+  runtime: nodejs14.x
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'us-east-1'}
 
 layers:
   lambdaLayerModule:
-    path: layer_modules # required, path to layer contents on disk
-    name: ${self:service}-${self:provider.stage} # optional, Deployed Lambda layer name
-    description: layers of modules for dependencies # optional, Description to publish to AWS
-    compatibleRuntimes: # optional, a list of runtimes this layer is compatible with
-      - nodejs10.x
+    path: layer_modules
+    name: ${self:service}-${self:provider.stage}
+    description: layers of modules for dependencies
+    compatibleRuntimes:
       - nodejs12.x
-    retain: true # optional, false by default. If true, layer versions are not deleted as new ones are created
+      - nodejs12.x
+    retain: true
