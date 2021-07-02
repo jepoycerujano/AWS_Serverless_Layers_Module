@@ -29,5 +29,5 @@ layers:
     description: layers of modules for dependencies
     compatibleRuntimes:
       - nodejs12.x
-      - nodejs12.x
+      - nodejs14.x
     retain: true
